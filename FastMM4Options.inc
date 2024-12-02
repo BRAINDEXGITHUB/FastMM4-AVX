@@ -57,7 +57,7 @@ Set the default options for FastMM here.
  Delphi memory manager will be used (which, since Delphi 2006, is FastMM
  without FullDebugMode.}
 
-{.$define InstallOnlyIfRunningInIDE}
+{$define InstallOnlyIfRunningInIDE}
 
 
 {Due to QC#14070 ("Delphi IDE attempts to free memory after the shutdown code
@@ -65,7 +65,7 @@ Set the default options for FastMM here.
  used inside a replacement borlndmm.dll for the IDE. Setting this option will
  circumvent this problem by never uninstalling the memory manager.}
 
-{.$define NeverUninstall}
+{$define NeverUninstall}
 
 
 {Set this option when you use runtime packages in this application or library.
@@ -75,7 +75,7 @@ Set the default options for FastMM here.
  of A/Vs. (See the FAQ for more detail.) You may have to combine this option
  with the NeverUninstall option.}
 
-{.$define UseRuntimePackages}
+{$define UseRuntimePackages}
 
 
 
@@ -233,7 +233,7 @@ at the beginning of the main .pas file for the discussion }
 {Set this option to use the Windows API OutputDebugString procedure to output
  debug strings on startup/shutdown and when errors occur.}
 
- {.$define UseOutputDebugString}
+ {$define UseOutputDebugString}
 
 
 {Set this option to use the assembly language version of GetMem and FreeMem
@@ -302,7 +302,7 @@ be able to use efficient locking without inline assembly.}
  FastMM_FullDebugMode.dll library. If this library is not available you will
  get an error on startup.}
 
-{.$define FullDebugMode}
+{$define FullDebugMode}
 
 
   {Set this option to perform "raw" stack traces, i.e. check all entries on the
@@ -461,7 +461,7 @@ Combine it with the two options below for further fine-tuning.}
    compiled unit to perform memory leak checking. This option has no effect if
    the option "EnableMemoryLeakReporting" is not also set.}
 
-  {.$define RequireDebugInfoForLeakReporting}
+  {$define RequireDebugInfoForLeakReporting}
 
 
   {Set this option to enable manual control of the memory leak report. When
