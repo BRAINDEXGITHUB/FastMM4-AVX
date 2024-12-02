@@ -342,7 +342,7 @@ be able to use efficient locking without inline assembly.}
   {Deletes the error log file on startup. No effect if LogErrorsToFile is not
    also set.}
 
-  {.$define ClearLogFileOnStartup}
+  {$define ClearLogFileOnStartup}
 
 
   {Loads the FASTMM_FullDebugMode.dll dynamically. If the DLL cannot be found
