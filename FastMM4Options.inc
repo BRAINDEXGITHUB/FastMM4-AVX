@@ -57,7 +57,7 @@ Set the default options for FastMM here.
  Delphi memory manager will be used (which, since Delphi 2006, is FastMM
  without FullDebugMode.}
 
-{$define InstallOnlyIfRunningInIDE}
+{.$define InstallOnlyIfRunningInIDE}
 
 
 {Due to QC#14070 ("Delphi IDE attempts to free memory after the shutdown code
