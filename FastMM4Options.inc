@@ -356,7 +356,7 @@ be able to use efficient locking without inline assembly.}
   {Uses MemoryLoadLibrary to allow loading FastMM_FullDebugMode.dll from 
   Ressource if no DLL is found.}
  
-  {.$define IncludeResource}
+  {$define IncludeResource}
   (*Include Platform depending FullDebugMode.dll in JCLDebug-Mode.
 	This has no effect without LoadDebugDLLDynamically or MemoryLoadLibrarySupport.
   If not defined linking can be done from Project-File:
@@ -367,7 +367,7 @@ be able to use efficient locking without inline assembly.}
   {$ENDIF}	
   *)
 	
-  {.$define IncludeResource_madExcept}
+  {$define IncludeResource_madExcept}
   (*Include Platform depending FullDebugMode.dll in madExcept-Mode.
 	This has no effect without LoadDebugDLLDynamically or MemoryLoadLibrarySupport.
   If not defined linking can be done from Project-File:
@@ -700,7 +700,7 @@ Combine it with the two options below for further fine-tuning.}
  Otherwise the default Delphi memory manager will be used (which is equivalent
  to the non-FullDebugMode FastMM since Delphi 2006.)}
 
-{.$define FullDebugModeInIDE}
+{$define FullDebugModeInIDE}
 
 
 {Combines the FullDebugMode, LoadDebugDLLDynamically and
@@ -713,18 +713,20 @@ Combine it with the two options below for further fine-tuning.}
 
 
 {Group the options you use for release and debug versions below}
-{$ifdef Release}
+{$ifdef RELEASE}
   {Specify the options you use for release versions below}
-  {.$undef FullDebugMode}
-  {.$undef CheckHeapForCorruption}
-  {.$define ASMVersion}
-  {.$undef EnableMemoryLeakReporting}
-  {.$undef UseOutputDebugString}
+  {$undef FullDebugMode}
+  {$undef CheckHeapForCorruption}
+  {$define ASMVersion}
+  {$undef EnableMemoryLeakReporting}
+  {$undef UseOutputDebugString}
+{$undef FullDebugModeInIDE}
 {$else}
   {Specify the options you use for debugging below}
-  {.$define FullDebugMode}
-  {.$define EnableMemoryLeakReporting}
-  {.$define UseOutputDebugString}
+  {$define FullDebugMode}
+  {$define EnableMemoryLeakReporting}
+  {$define UseOutputDebugString}
+{$define FullDebugModeInIDE}
 {$endif}
 
 {--------------------Compilation Options For borlndmm.dll---------------------}
