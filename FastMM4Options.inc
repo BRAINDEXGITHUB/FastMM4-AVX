@@ -454,7 +454,7 @@ Combine it with the two options below for further fine-tuning.}
    "EnableMemoryLeakReporting" is not also set. Note that this option does not
    work with libraries, only EXE projects.}
 
-  {$define RequireDebuggerPresenceForLeakReporting}
+  {.$define RequireDebuggerPresenceForLeakReporting}
 
 
   {Set this option to require the presence of debug info ($D+ option) in the
@@ -700,7 +700,7 @@ Combine it with the two options below for further fine-tuning.}
  Otherwise the default Delphi memory manager will be used (which is equivalent
  to the non-FullDebugMode FastMM since Delphi 2006.)}
 
-{$define FullDebugModeInIDE}
+{.$define FullDebugModeInIDE}
 
 
 {Combines the FullDebugMode, LoadDebugDLLDynamically and
@@ -709,7 +709,7 @@ Combine it with the two options below for further fine-tuning.}
  is useful when the same executable will be distributed for both debugging as
  well as deployment.}
 
-{.$define FullDebugModeWhenDLLAvailable}
+{$define FullDebugModeWhenDLLAvailable}
 
 
 {Group the options you use for release and debug versions below}
@@ -726,7 +726,6 @@ Combine it with the two options below for further fine-tuning.}
   {$define FullDebugMode}
   {$define EnableMemoryLeakReporting}
   {$define UseOutputDebugString}
-{$define FullDebugModeInIDE}
 {$endif}
 
 {--------------------Compilation Options For borlndmm.dll---------------------}
