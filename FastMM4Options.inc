@@ -65,7 +65,7 @@ Set the default options for FastMM here.
  used inside a replacement borlndmm.dll for the IDE. Setting this option will
  circumvent this problem by never uninstalling the memory manager.}
 
-{$define NeverUninstall}
+{.$define NeverUninstall}
 
 
 {Set this option when you use runtime packages in this application or library.
@@ -221,7 +221,7 @@ at the beginning of the main .pas file for the discussion }
  FastMM4.pas unit. This will prevent the integrated debugger from stepping into
  the memory manager code.}
 
- {.$define NoDebugInfo}
+ {$define NoDebugInfo}
 
 
 {Enable this option to suppress the display of all message dialogs. This is
@@ -310,7 +310,7 @@ be able to use efficient locking without inline assembly.}
    than using the stack frame tracing method, but is usually more complete. Has
    no effect unless FullDebugMode is enabled}
 
-  {.$define RawStackTraces}
+  {$define RawStackTraces}
 
 
   {Set this option to check for user code that uses an interface of a freed
@@ -318,7 +318,7 @@ be able to use efficient locking without inline assembly.}
    being freed (the two are not compatible). This option has no effect if
    FullDebugMode is not also enabled.}
 
-  {.$define CatchUseOfFreedInterfaces}
+  {$define CatchUseOfFreedInterfaces}
 
 
   {Set this option to log all errors to a text file in the same folder as the
