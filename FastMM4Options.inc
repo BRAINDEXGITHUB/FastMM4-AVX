@@ -713,7 +713,7 @@ Combine it with the two options below for further fine-tuning.}
 
 
 {Group the options you use for release and debug versions below}
-{$ifdef RELEASE}
+{$ifdef PRODUCTION_RELEASE}
   {Specify the options you use for release versions below}
   {$undef FullDebugMode}
   {$undef CheckHeapForCorruption}
